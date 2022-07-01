@@ -17,6 +17,8 @@ return [
 
     'default' => env('DB_CONNECTION', 'mysql'),
 
+    'constrained' => env('DB_CONSTRAINED', true),
+
     /*
     |--------------------------------------------------------------------------
     | Database Connections
