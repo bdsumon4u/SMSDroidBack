@@ -1,0 +1,28 @@
+{
+    "name": "hotash/authable",
+    "description": "Jetstream based multi-auth package for Laravel.",
+    "minimum-stability": "dev",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Hotash\\Authable\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hotash\\Authable\\AuthableServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Sumon Ahmed",
+            "email": "bdsumon4u@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^9.2",
+        "laravel/jetstream": "^2.9"
+    }
+}

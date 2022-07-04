@@ -1,0 +1,22 @@
+{
+    "name": "hotash/admin",
+    "description": "Admin package for HotashCMS",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Hotash\\Admin\\": "src",
+            "Database\\Factories\\": "database/factories",
+            "Database\\Seeders\\": "database/seeds"
+        }
+    },
+    "require": {
+        "hotash/authable": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hotash\\Admin\\AdminServiceProvider"
+            ]
+        }
+    }
+}

@@ -34,8 +34,16 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::domain(\Hotash\Authable\Facades\Authable::guardURL('admin'))->middleware([
-//    'auth:sanctum',
+Route::domain('admin.foo.captchapays.eu.org')->get('dashboard', function () {
+    dd('admin.foo');
+});
+
+Route::domain('admin.bar.captchapays.eu.org')->get('dashboard', function () {
+    dd('admin.bar');
+});
+
+Route::domain('smsdroid.test')->prefix('admin')->middleware([
+    'auth:sanctum',
     'auth:admin',
     'verified',
 ])->as('admin.')->group(function () {
